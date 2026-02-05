@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Message } from '../types';
 import MarkdownRenderer from './MarkdownRenderer';
@@ -64,7 +65,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, onOptionClick }) => 
                 <button
                   key={index}
                   onClick={() => onOptionClick && onOptionClick(option)}
-                  className="bg-indigo-500/10 text-indigo-300 border border-indigo-700 rounded-xl px-4 py-2 text-sm font-medium hover:bg-indigo-500/20 active:scale-98 transition-all whitespace-nowrap overflow-hidden text-ellipsis shadow-sm"
+                  className="bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-xl px-4 py-2 text-sm font-semibold hover:bg-indigo-100 hover:border-indigo-300 active:scale-98 transition-all whitespace-nowrap overflow-hidden text-ellipsis"
                 >
                   {option}
                 </button>

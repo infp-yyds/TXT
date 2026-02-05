@@ -97,7 +97,7 @@ export const sendMessageToModel = async (message: string, settings: AppSettings,
       // We use `generateContent` for this single turn to get the conversation started based on the system instruction.
       if (history.length === 0) {
         const response = await ai.models.generateContent({
-            model: settings.modelName || 'gemini-3-pro-preview',
+            model: settings.modelName || 'gemini-3-flash-preview',
             contents: '你好', // A simple prompt to elicit the initial greeting.
             config: { systemInstruction: SYSTEM_INSTRUCTION }
         });
@@ -129,7 +129,7 @@ export const sendMessageToModel = async (message: string, settings: AppSettings,
       }));
       
       const chat = ai.chats.create({
-        model: settings.modelName || 'gemini-3-pro-preview',
+        model: settings.modelName || 'gemini-3-flash-preview',
         history: chatHistoryForCreate,
         config: { systemInstruction: SYSTEM_INSTRUCTION },
       });
@@ -264,7 +264,7 @@ ${noteCardsContent}
     };
 
     const response = await ai.models.generateContent({
-      model: settings.modelName || 'gemini-3-pro-preview',
+      model: settings.modelName || 'gemini-3-flash-preview',
       contents: GENERATE_OUTLINE_PROMPT,
       config: {
         responseMimeType: "application/json",
@@ -364,7 +364,7 @@ Respond with a single, valid JSON object with two keys: "questionSummary" and "a
           required: ['questionSummary', 'answerSummary'],
       };
       const response = await ai.models.generateContent({
-          model: settings.modelName || 'gemini-3-pro-preview',
+          model: settings.modelName || 'gemini-3-flash-preview',
           contents: SUMMARY_PROMPT,
           config: {
               responseMimeType: "application/json",
