@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { AppSettings } from '../types';
 import { X, Cpu, Globe, Key, Layers, ChevronDown, ChevronUp, Zap, Settings2 } from 'lucide-react';
@@ -15,7 +16,7 @@ const BRAND_TEMPLATES = [
     id: 'gemini',
     label: 'Google Gemini', 
     provider: 'gemini' as const,
-    model: 'gemini-3-pro-preview', 
+    model: 'gemini-3-flash-preview', 
     base: 'google',
     color: 'bg-blue-50 text-blue-600 border-blue-100'
   },
